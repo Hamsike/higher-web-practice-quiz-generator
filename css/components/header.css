@@ -1,0 +1,136 @@
+.header {
+  position: fixed;
+  top: 0;
+  inline-size: 100%;
+  z-index: 10;
+  background-color: var(--components-background-color);
+}
+
+.header__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--spacing-16);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 12;
+  transition: border-color 0.3s ease-out;
+}
+
+.logo {
+  width: 25px;
+}
+
+.buttons-container {
+  display: none;
+}
+
+.button__logo {
+  background-color: transparent;
+  border: none;
+}
+
+.mobile__nav {
+  display: none;
+  position: fixed;
+  background-color: var(--components-background-color);
+  inline-size: 100%;
+  block-size: 100%;
+  bottom: 0;
+  z-index: 11;
+}
+
+.mobile__nav.active {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.header:has(.mobile__nav.active) .up__line{
+  d: path("M10 34L34 10")
+}
+
+.header:has(.mobile__nav.active) .medium__line{
+  d: path("")
+}
+
+.header:has(.mobile__nav.active) .down__line{
+  d: path("M34 34L10 10")
+}
+
+
+.header__button {
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+  border-top: 1px solid var(--main-color);
+  padding-block: var(--spacing-16);
+  padding-inline: var(--spacing-8);
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  inline-size: var(--grid-container-width);
+}
+
+@media (width > 415px) {
+  .mobile__nav.active {
+    display: none;
+  }
+
+  .button__logo {
+    display: none;
+  }
+
+  .buttons-container {
+    display: block;
+    position: initial;
+    backdrop-filter: none;
+  }
+
+  .header__button {
+    border-radius: var(--raduis-xs);
+    padding-block: var(--spacing-8);
+    padding-inline: var(--spacing-16);
+    text-align: center;
+    inline-size: auto;
+  }
+
+  .button__to_all_quizzes {
+    color: var(--main-color);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .button__to_all_quizzes:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+  }
+
+  .button__to_generator {
+    color: var(--components-background-color);
+    background-color: var(--main-color);
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .button__to_generator:hover {
+    opacity: 85%;
+  }
+}
+
+@media (width < 1200px) {
+  .header__container {
+    padding-block: var(--spacing-12);
+  }
+}
+
+@media (width < 415px) {
+  .header:has(.mobile__nav.active) .header__container {
+      border-bottom-color: var(--main-color);
+  }
+  .header__button:hover {
+    opacity: 80%;
+  }
+
+  body:has(.mobile__nav.active) {
+    overflow-y: hidden;
+  }
+}

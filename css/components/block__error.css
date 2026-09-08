@@ -1,0 +1,33 @@
+.block__error {
+  position: absolute;
+  z-index: 1;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  flex-direction: column;
+  background-color: rgba(239, 68, 68, 0.05);
+  gap: var(--spacing-16);
+  padding-inline: var(--spacing-16);
+  padding-block: var(--spacing-12);
+  border: 1px solid var(--error-color);
+  border-radius: var(--raduis-sm);
+  max-inline-size: 400px;
+  transition: opacity 0.3s ease;
+}
+
+.block__error_header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4)
+}
+
+.block__error.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.block__error {
+  margin-top: 20px;
+}

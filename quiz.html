@@ -1,18 +1,129 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <title>Прохождение теста</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/quiz.css" />
-  </head>
-  <body>
-    <script
-      type="module"
-      src="./js/pages/quiz.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Прохождение теста</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+  </link>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/pages/quiz.css" />
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="header__container layout">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 40" class="logo">
+        <use href="./assets/logo.svg" />
+      </svg>
+      <button class="button__logo" type="button">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 12H36" stroke="#1E40FF" stroke-width="2" class="up__line" />
+          <path d="M8 22H36" stroke="#1E40FF" stroke-width="2" class="medium__line" />
+          <path d="M8 32H36" stroke="#1E40FF" stroke-width="2" class="down__line" />
+        </svg>
+      </button>
+      <nav class="buttons-container">
+        <button class="header__button button__to_all_quizzes text__body_accent navigate__to_quizzes" type="button">
+          Посмотреть сохранённые квизы
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile__nav">
+      <button class="header__button text__body_accent navigate__to_quizzes">
+        Сохранённые квизы
+      </button>
+    </nav>
+  </header>
+  <main class="main layout">
+    <div class="layout__container small__layout_container quizz__container">
+      <section class="quizz__question_info">
+        <div class="quizz__titles">
+          <h1 class="adaptive__title quizz__title">dwdw</h1>
+          <span class="text__body quizz__desc">dwdw</span>
+        </div>
+        <div class="progressbar">
+          <div class="progressbar__state text__body">
+            <span class="progressbar__state_value"></span>
+            <span class="progressbar__state_count"></span>
+          </div>
+          <div class="progressbar__vizual">
+            <div class="progressbar__fill"></div>
+          </div>
+        </div>
+        <div class="quizz__question_content">
+          <form class="quizz__question_form">
+            <div class="quiz__question"></div>
+            <div class="quiz__actions">
+              <button type="submit" class="button button__primary quiz__submit" disabled>
+                Ответить
+              </button>
+              <button type="button" class="button button__primary quiz__next" hidden>
+                Следующий вопрос
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="result" id="result" hidden>
+        <h2 class="result__title adaptive__title">Тест завершен</h2>
+        <p class="result__subtitle">Вы ответили правильно на все вопросы</p>
+        <p class="result__message text text__caption">Ваши знания на высоте</p>
+        <div class="result__actions">
+          <button type="button" class="button button__primary button__to_quizzes">К списку квизов</>
+            <button type="button" class="button button__secondary result__restart">
+              Пройти снова
+            </button>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__title">Учебный проект 2026</div>
+  </footer>
+
+  <template id="single-question-template">
+    <div class="question" data-type="single">
+      <h3 class="question__text adaptive__subtitle"></h3>
+      <p class="question__hint text__caption">Выберите один вариант ответа</p>
+      <div class="question__options"></div>
+    </div>
+  </template>
+
+  <template id="multiple-question-template">
+    <div class="question" data-type="multiple">
+      <h3 class="question__text adaptive__subtitle"></h3>
+      <p class="question__hint text__caption">Выберите один или несколько вариантов ответа</p>
+      <div class="question__options"></div>
+    </div>
+  </template>
+
+  <template id="option-template">
+    <div class="option">
+      <label class="option__label">
+        <input type="radio" class="radio option__input" name="question" value="" />
+        <span class="option__text"></span>
+      </label>
+      <div class="option__message text__caption" hidden></div>
+    </div>
+  </template>
+
+  <template id="checkbox-option-template">
+    <div class="option">
+      <label class="option__label">
+        <input type="checkbox" class="checkbox option__input" name="question" value="" />
+        <span class="option__text"></span>
+      </label>
+      <div class="option__message text__caption" hidden></div>
+    </div>
+  </template>
+
+  <script type="module" src="./js/pages/quiz.js"></script>
+</body>
+
 </html>

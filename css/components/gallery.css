@@ -1,0 +1,10 @@
+
+.gallery__title {
+  margin-block-end: var(--spacing-20);
+}
+
+@media (width < 415px) {
+  .gallery__title {
+    margin-block-end: var(--spacing-16)
+  }
+}

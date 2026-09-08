@@ -1,0 +1,14 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: var(--footer-height);
+  text-align: center;
+  color: var(--accent-text-color);
+  inline-size: 100%;
+}
+
+@media (width < 1201px) {
+  .footer {
+    display: none;
+  }
+}

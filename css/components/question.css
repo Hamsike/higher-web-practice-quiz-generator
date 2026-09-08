@@ -1,0 +1,23 @@
+.quiz__question {
+	margin-bottom: var(--spacing-24);
+}
+
+.question__text {
+	margin-bottom: var(--spacing-4);
+}
+
+.question__hint {
+	margin-bottom: var(--spacing-24);
+}
+
+.question__options {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-8);
+}
+
+@media (width <= 414px) {
+	.quiz__question {
+	margin-bottom: var(--spacing-16);
+}
+}

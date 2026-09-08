@@ -1,18 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0" />
-    <title>Ваши квизы</title>
-    <link
-      rel="stylesheet"
-      href="./css/pages/quizzes.css" />
-  </head>
-  <body>
-    <script
-      type="module"
-      src="./js/pages/quizzes.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ваши квизы</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/logo.svg">
+  </link>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/pages/quizzes.css" />
+</head>
+
+<body class="page">
+  <header class="header">
+    <div class="header__container layout">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 40" class="logo">
+        <use href="./assets/logo.svg" />
+      </svg>
+      <button class="button__logo" type="button">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 12H36" stroke="#1E40FF" stroke-width="2" class="up__line" />
+          <path d="M8 22H36" stroke="#1E40FF" stroke-width="2" class="medium__line" />
+          <path d="M8 32H36" stroke="#1E40FF" stroke-width="2" class="down__line" />
+        </svg>
+      </button>
+      <nav class="buttons-container">
+        <button class="header__button button__to_generator text__body_accent navigate_to_generator" type="button">
+          Добавить квиз
+        </button>
+      </nav>
+    </div>
+    <nav class="mobile__nav">
+      <button class="header__button text__body_accent navigate_to_generator">
+        Добавить квиз
+      </button>
+    </nav>
+  </header>
+  <main class="main layout">
+    <section id="gallery_container" class="layout__container large__layout_container">
+      <h1 class="adaptive__title gallery__title">Ваши квизы</h1>
+      <ul class="quizzes__list">
+      </ul>
+    </section>
+    <section id="banner_not_found" class="layout__container small__layout_container content">
+      <div class="content__titles">
+        <h1 class="adaptive__title">У вас нет сохраннёных квизов&nbsp(</h1>
+        <p class="text__body">Но вы можете добавить!</p>
+      </div>
+      <button id="button_to_generator" class="button button__primary text__body_accent">Добавить квиз</button>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__title">Учебный проект 2026</div>
+  </footer>
+  <template id="template__quizz_card">
+    <li class="quizz__card">
+      <h3 class="text__h3 quizz__title">вцвц</h3>
+      <p class="text__body quizz__desc">вввввввввввв</p>
+      <div class="about__quizz">
+        <span class="text__caption quiz__count_question">10 вопросов</span>
+        <a class="text__body_accent quiz_link" href="#">Пройти</a>
+      </div>
+    </li>
+  </template>
+  <script type="module" src="./js/pages/quizzes.js"></script>
+</body>
+
 </html>

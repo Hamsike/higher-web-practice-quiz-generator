@@ -1,0 +1,5 @@
+@import url('./index.css');
+@import url('../components/banner__not_found.css');
+@import url('../components/quizzes__list.css');
+@import url('../components/quizz__card.css');
+@import url('../components/gallery.css');

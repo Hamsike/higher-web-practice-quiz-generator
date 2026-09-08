@@ -1,0 +1,16 @@
+.quizz__question_info {
+  display: grid;
+  gap: var(--spacing-24);
+}
+
+.quizz__titles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8)
+}
+
+@media (width < 415px) {
+  .quizz__question_info {
+    gap: var(--spacing-16);
+  }
+}

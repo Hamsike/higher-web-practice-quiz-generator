@@ -1,0 +1,24 @@
+.content {
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.content__titles {
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.content .button {
+  align-self: self-start;
+}
+
+@media (width < 415px) {
+  .content {
+    grid-template-rows: 1fr auto;
+  }
+  .content__titles {
+    align-self: center;
+  }
+}

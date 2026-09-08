@@ -1,0 +1,42 @@
+.button {
+  transition: opacity 0.3s ease-in-out;
+  border-radius: var(--raduis-xs);
+  padding-block: var(--spacing-8);
+  padding-inline: var(--spacing-16);
+  text-align: center;
+  inline-size: fit-content;
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.button__primary{
+  background-color: var(--main-color);
+  color: var(--components-background-color);
+  border: none;
+}
+
+.button__secondary{
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background-color: var(--components-background-color);
+}
+
+.button__primary:hover {
+  opacity: 85%;
+}
+
+.button__secondary:hover {
+  opacity: 80%;
+}
+
+.button:disabled {
+  color: var(--components-background-color);
+  background-color: rgba(229, 231, 235, 1);
+  cursor: initial;
+}
+
+@media (width < 415px) {
+  .button {
+    inline-size: 100%;
+  }
+}

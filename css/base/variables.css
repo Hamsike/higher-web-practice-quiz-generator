@@ -1,0 +1,101 @@
+:root {
+  --main-font-family: 'Inter', sans-serif;
+  --accent-font-family: 'JetBrains Mono', sans-serif;
+
+  --h1-font-size: 32px;
+  --h1-font-weight: bold;
+  --h1-font-lineheight: 120%;
+
+  --h2-font-size: 24px;
+  --h2-font-weight: 600;
+  --h2-font-lineheight: 120%;
+
+  --h3-font-size: 18px;
+  --h3-font-weight: 600;
+  --h3-font-lineheight: 130%;
+
+  --body-font-size: 16px;
+  --body-font-weight: 400;
+  --body-font-lineheight: 150%;
+
+  --accent-body-font-size: 16px;
+  --accent-body-font-weight: 500;
+  --accent-body-font-lineheight: 150%;
+
+  --caption-font-size: 12px;
+  --caption-font-weight: 400;
+  --caption-font-lineheight: 140%;
+
+  --mono-font-size: 14px;
+  --mono-font-weight: 400;
+  --mono-font-lineheight: 150%;
+
+  --raduis-xs: 4px;
+  --raduis-sm: 8px;
+  --raduis-md: 12px;
+  --raduis-lg: 16px;
+
+  --spacing-2: 2px;
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-96: 96px;
+
+  --main-color: rgba(59, 130, 246, 1);
+  --main-background-color: rgba(249, 250, 251, 1);
+  --components-background-color: rgba(255, 255, 255, 1);
+  --main-text-color: rgba(17, 24, 39, 1);
+  --accent-text-color: rgba(107, 114, 128, 1);
+  --error-color: rgba(239, 68, 68, 1);
+  --succes-color: rgba(16, 185, 129, 1);
+  --border-color: rgba(229, 231, 235, 1);
+
+
+  --shadow-E1: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  --shadow-E2: 0px 4px 16px 0px rgba(0, 0, 0, 0.12);
+  --shadow-E3: 0px 8px 24px 0px rgba(0, 0, 0, 0.14);
+
+  --grid-columns: 12;
+  --grid-gutter: 24px;
+  --grid-margin: 64px;
+  --grid-max-width: 1140px;
+  --grid-container-width: clamp(328px,
+      max(calc(49.47368421vw + 110.3157895px),
+        calc(181.6666667vw - 1476px)),
+      1140px);
+  --grid-container-offset: calc((100vw - var(--grid-container-width)) / var(--grid-columns));
+
+  --header-height: 72px;
+  --footer-height: 88px;
+
+  --icon-check: url("../../assets/icon-check.svg");
+  --icon-cross: url('../../assets/icon-cross.svg');
+}
+
+@media (max-width: 1200px) {
+  :root {
+    --grid-columns: 8;
+    --grid-gutter: 20px;
+    --grid-margin: 32px;
+    --grid-max-width: 704px;
+    --header-height: 64px;
+    --footer-height: 0px;
+  }
+}
+
+@media (max-width: 414px) {
+  :root {
+    --grid-columns: 4;
+    --grid-gutter: 16px;
+    --grid-margin: 16px;
+    --grid-max-width: 328px;
+    --header-height: 64px;
+    --footer-height: 0px;
+  }
+}

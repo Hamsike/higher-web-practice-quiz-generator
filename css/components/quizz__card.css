@@ -1,0 +1,41 @@
+.quizz__card {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--components-background-color);
+  border-radius: var(--raduis-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-E1);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.quizz__card:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: var(--main-color)
+}
+
+.quizz__title {
+  margin-bottom: 8px;
+}
+
+.about__quizz {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quizz__card:hover .quiz__count_question {
+  color: var(--main-color);
+}
+
+.quiz_link{
+  text-decoration: none;
+  color: var(--main-color);
+  cursor: pointer;
+}
+
+.quiz_link:focus-visible {
+  outline: 1px solid black
+}

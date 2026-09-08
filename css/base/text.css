@@ -1,0 +1,58 @@
+
+.text__body {
+  color: var(--accent-text-color);
+}
+
+.text__caption {
+  font-size: var(--caption-font-size);
+  font-weight: var(--caption-font-weight);
+  line-height: var(--caption-font-lineheight);
+  color: var(--accent-text-color);
+}
+
+.text__mono {
+  font-family: var(--accent-font-family);
+  font-size: var(--mono-font-size);
+  font-weight: var(--mono-font-weight);
+  line-height: var(--mono-font-lineheight);
+  color: var(--accent-text-color);
+}
+
+.text__body_accent {
+  font-size: var(--accent-body-font-size);
+  font-weight: var(--accent-body-font-weight);
+  line-height: var(--accent-body-font-lineheight);
+  font-weight: var(--accent-body-font-weight);
+}
+
+.adaptive__title {
+  font-size: var( --h1-font-size);
+  font-weight: var(--h1-font-weight);
+  line-height: var(--h1-font-lineheight);
+}
+
+.text__h3 {
+  font-size: var( --h3-font-size);
+  font-weight: var(--h3-font-weight);
+  line-height: var(--h3-font-lineheight);
+}
+
+.adaptive__subtitle {
+  font-size: var( --h2-font-size);
+  font-weight: var(--h2-font-weight);
+  line-height: var(--h2-font-lineheight)
+}
+
+@media (width < 415px ) {
+  .adaptive__title {
+    font-size: var( --h2-font-size);
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-font-lineheight);
+  }
+
+  .adaptive__subtitle  {
+    font-size: var( --h3-font-size);
+    font-weight: var(--h3-font-weight);
+    line-height: var(--h3-font-lineheight);
+  }
+}

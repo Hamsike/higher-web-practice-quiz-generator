@@ -1,0 +1,18 @@
+.progressbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+.progressbar__vizual {
+  block-size: 6px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  border-radius: var(--raduis-xs);
+}
+
+.progressbar__fill {
+  height: 100%;
+  width: 0;
+  background-color: var(--main-color);
+  border-radius: inherit;
+}
