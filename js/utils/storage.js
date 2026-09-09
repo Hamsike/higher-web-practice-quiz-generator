@@ -1,4 +1,4 @@
-import { dbPromise } from './db.js';
+import { dbPromise } from './db';
 import { nanoid } from 'nanoid';
 
 export async function saveQuiz(quizData) {

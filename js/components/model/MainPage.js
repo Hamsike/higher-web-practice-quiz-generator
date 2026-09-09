@@ -12,7 +12,6 @@ export class MainPage {
       try {
         parsedData = JSON.parse(formData)
         const errors = quizSchema.safeParse(parsedData)
-        console.log(errors)
         if (errors.success) {
           this._events.emit('parse:succes', parsedData)
           return

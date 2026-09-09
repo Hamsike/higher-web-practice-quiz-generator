@@ -1,5 +1,4 @@
-import { th } from "zod/v4/locales";
-import { Component } from "../base/Component.js";
+import { Component } from "../base/Component";
 
 export class FormGeneratorView extends Component {
   constructor(formContainer, events) {
